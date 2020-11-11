@@ -22,9 +22,11 @@ class _TasksListState extends State<TasksList> {
           taskTitle: tasks[index].name,
           isChecked: tasks[index].isDone,
           checkboxCallback: (checkboxState) {
+
             setState(() {
               tasks[index].toggleDone();
             });
+          },
         );
       },
       itemCount: tasks.length,
